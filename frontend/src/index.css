@@ -26,6 +26,72 @@
     --input: 217 33% 17%;
     --ring: 155 100% 45%;
     --radius: 0.75rem;
+
+    /* semantic palette — dark (Midnight Trading Floor) */
+    --c-white: 255 255 255;
+    --c-black: 0 0 0;
+    --c-slate-200: 226 232 240;
+    --c-slate-300: 203 213 225;
+    --c-slate-400: 148 163 184;
+    --c-slate-500: 100 116 139;
+    --c-slate-600: 71 85 105;
+    --c-slate-700: 51 65 85;
+    --c-slate-800: 30 41 59;
+    --c-slate-900: 15 23 42;
+    --c-slate-950: 2 6 23;
+    --c-ink-950: 2 6 23;
+    --c-ink-900: 10 14 26;
+    --c-ink-850: 13 19 34;
+    --c-ink-800: 17 26 46;
+    --c-bull: 0 229 155;
+    --c-bear: 250 56 18;
+    --c-gold: 212 175 55;
+    --c-fblue: 45 125 210;
+    --glow: 0 229 155;
+  }
+
+  html.light {
+    --background: 216 50% 97%;
+    --foreground: 222 65% 9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 65% 9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 65% 9%;
+    --primary: 161 100% 33%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 214 32% 91%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 214 32% 91%;
+    --muted-foreground: 215 25% 38%;
+    --accent: 161 100% 33%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 9 80% 46%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 214 25% 86%;
+    --input: 214 25% 86%;
+    --ring: 161 100% 33%;
+
+    /* semantic palette — light (Daylight Trading Desk) */
+    --c-white: 10 18 36;
+    --c-black: 255 255 255;
+    --c-slate-200: 30 41 59;
+    --c-slate-300: 51 65 85;
+    --c-slate-400: 71 85 105;
+    --c-slate-500: 100 116 139;
+    --c-slate-600: 148 163 184;
+    --c-slate-700: 203 213 225;
+    --c-slate-800: 226 232 240;
+    --c-slate-900: 248 250 252;
+    --c-slate-950: 255 255 255;
+    --c-ink-950: 243 246 251;
+    --c-ink-900: 255 255 255;
+    --c-ink-850: 248 250 253;
+    --c-ink-800: 235 241 248;
+    --c-bull: 0 168 116;
+    --c-bear: 214 44 30;
+    --c-gold: 164 122 10;
+    --c-fblue: 27 99 176;
+    --glow: 0 168 116;
   }
 
   * {
@@ -44,22 +110,22 @@
   }
 
   ::selection {
-    background: rgba(0, 229, 155, 0.25);
-    color: #ffffff;
+    background: rgb(var(--glow) / 0.25);
+    color: rgb(var(--c-white));
   }
 
   ::-webkit-scrollbar {
     width: 10px;
   }
   ::-webkit-scrollbar-track {
-    background: #020617;
+    background: rgb(var(--c-ink-950));
   }
   ::-webkit-scrollbar-thumb {
-    background: #1e293b;
+    background: rgb(var(--c-slate-700));
     border-radius: 8px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #334155;
+    background: rgb(var(--c-slate-600));
   }
 }
 
@@ -70,12 +136,16 @@
 
   .terminal-card {
     @apply bg-ink-900/90 border border-slate-800 rounded-xl;
-    box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+    box-shadow: inset 0 1px 0 0 rgb(var(--c-white) / 0.05);
+  }
+
+  html.light .terminal-card {
+    box-shadow: 0 1px 2px rgb(15 23 42 / 0.05), 0 10px 30px -8px rgb(15 23 42 / 0.1);
   }
 
   .grid-bg {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-image: linear-gradient(rgb(var(--c-white) / 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(var(--c-white) / 0.03) 1px, transparent 1px);
     background-size: 44px 44px;
   }
 
@@ -93,24 +163,24 @@
   }
 
   .btn-glow {
-    box-shadow: 0 0 0 1px rgba(0, 229, 155, 0.4), 0 0 24px rgba(0, 229, 155, 0.15),
-      inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 0 1px rgb(var(--glow) / 0.4), 0 0 24px rgb(var(--glow) / 0.15),
+      inset 0 1px 0 0 rgb(255 255 255 / 0.2);
   }
 
   .gold-border {
-    border: 1px solid rgba(212, 175, 55, 0.3);
+    border: 1px solid rgb(var(--c-gold) / 0.3);
   }
 }
 
 @layer utilities {
   .text-gradient-green {
-    background: linear-gradient(120deg, #ffffff 30%, #00e59b 70%);
+    background: linear-gradient(120deg, rgb(var(--c-white)) 30%, rgb(var(--c-bull)) 70%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
   .text-gradient-gold {
-    background: linear-gradient(120deg, #ffffff 30%, #d4af37 70%);
+    background: linear-gradient(120deg, rgb(var(--c-white)) 30%, rgb(var(--c-gold)) 70%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;

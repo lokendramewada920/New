@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowUpRight, CandlestickChart } from "lucide-react";
+import { ThemeToggle } from "../ThemeToggle";
 
 const LINKS = [
   { to: "/", label: "Home" },
@@ -82,6 +83,7 @@ const Navbar = () => {
               </NavLink>
             )
           )}
+          <ThemeToggle />
           <Link
             to="/contact"
             data-testid="nav-book-demo-btn"
@@ -92,14 +94,17 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <button
-          data-testid="nav-mobile-menu-btn"
-          onClick={() => setOpen(!open)}
-          className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 text-white lg:hidden"
-          aria-label="Toggle menu"
-        >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
+        <div className="flex items-center gap-2 lg:hidden">
+          <ThemeToggle />
+          <button
+            data-testid="nav-mobile-menu-btn"
+            onClick={() => setOpen(!open)}
+            className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 text-white"
+            aria-label="Toggle menu"
+          >
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
       </nav>
 
       <AnimatePresence>

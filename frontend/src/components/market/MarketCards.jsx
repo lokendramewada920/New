@@ -49,7 +49,8 @@ const MarketCards = ({ compact = false }) => {
           const up = m.change >= 0;
           const jitter = ((tick + i) % 3) * 0.01 * (up ? 1 : -1);
           const price = m.price * (1 + jitter / 100);
-          const color = up ? "#00E59B" : "#fa3812";
+          const light = typeof document !== "undefined" && document.documentElement.classList.contains("light");
+          const color = up ? (light ? "#009467" : "#00E59B") : (light ? "#d62c1e" : "#fa3812");
           return (
             <div
               key={m.symbol}

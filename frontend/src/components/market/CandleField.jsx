@@ -42,8 +42,8 @@ const CandleField = ({ className = "" }) => {
       candles = seed(0);
     };
 
-    const drawGrid = () => {
-      ctx.strokeStyle = "rgba(148,163,184,0.06)";
+    const drawGrid = (light) => {
+      ctx.strokeStyle = light ? "rgba(51,65,85,0.08)" : "rgba(148,163,184,0.06)";
       ctx.lineWidth = 1;
       for (let x = -offset % 44; x < w; x += 44) {
         ctx.beginPath();
@@ -65,11 +65,12 @@ const CandleField = ({ className = "" }) => {
         last = t;
       }
       ctx.clearRect(0, 0, w, h);
-      drawGrid();
+      const light = document.documentElement.classList.contains("light");
+      drawGrid(light);
 
       // line chart through closes
       ctx.beginPath();
-      ctx.strokeStyle = "rgba(0,229,155,0.28)";
+      ctx.strokeStyle = light ? "rgba(0,140,96,0.3)" : "rgba(0,229,155,0.28)";
       ctx.lineWidth = 1.5;
       candles.forEach((c, i) => {
         const x = c.x - offset;
@@ -82,7 +83,13 @@ const CandleField = ({ className = "" }) => {
         const x = c.x - offset;
         if (x < -CW) return;
         const up = c.close <= c.open;
-        const color = up ? "rgba(0,229,155,0.5)" : "rgba(250,56,18,0.45)";
+        const color = up
+          ? light
+            ? "rgba(0,150,104,0.55)"
+            : "rgba(0,229,155,0.5)"
+          : light
+            ? "rgba(200,45,30,0.5)"
+            : "rgba(250,56,18,0.45)";
         ctx.strokeStyle = color;
         ctx.fillStyle = color;
         ctx.lineWidth = 1;
