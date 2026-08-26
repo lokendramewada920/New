@@ -1,0 +1,156 @@
+{
+  "theme": "dark",
+  "archetype": "The Performance Pro + Luxury Hybrid",
+  "design_philosophy": "A 'Midnight Trading Floor' aesthetic. Combines the technical authority of an institutional trading terminal with the premium feel of high-end financial education. Restrained use of color, high contrast for legibility, and architectural grid structures.",
+  "typography": {
+    "heading_font": "Sora",
+    "body_font": "Manrope",
+    "data_font": "JetBrains Mono",
+    "rules": [
+      "No generic Sans fonts for headings (Inter is banned for headings). Use Sora for sleek, tech-forward authority.",
+      "Headings (>32px) must use `tracking-tighter`.",
+      "Overlines/Labels must be Uppercase, Tiny, and Wide spacing (`tracking-[0.2em]`).",
+      "Use JetBrains Mono specifically for numeric data, sparkline labels, ticker symbols, and counters to simulate a real trading terminal.",
+      "Never exceed `text-6xl` for hero headings. Use clamp or fluid typography."
+    ]
+  },
+  "colors": {
+    "background": {
+      "base": "#020617",
+      "surface_elevated": "#0a0e1a",
+      "card": "rgba(10, 14, 26, 0.7)",
+      "glass": "bg-slate-950/70 backdrop-blur-2xl"
+    },
+    "text": {
+      "primary": "#FFFFFF",
+      "secondary": "#94A3B8",
+      "muted": "#64748B"
+    },
+    "accent": {
+      "electric_green": "#00E59B",
+      "muted_gold": "#D4AF37",
+      "subtle_blue": "#2D7DD2",
+      "ember_red": "#fa3812"
+    },
+    "rules": [
+      "Use 'Tinted Grey' - rely on the Slate scale rather than neutral greys to add a cool, institutional tone.",
+      "Reserve high-saturation accents (Electric Green, Ember Red) exclusively for atmospheric glows, live status dots, chart sparklines, or primary CTAs.",
+      "Gradient usage must be heavily restricted to subtle borders (`border-gradient`) or soft background orbs (`bg-emerald-500/10 blur-3xl`). Never use full-screen flat gradients."
+    ]
+  },
+  "visual_enhancers": {
+    "surfaces": [
+      "Crystal Glass: Used for the sticky navbar and floating elements. `bg-slate-950/60 backdrop-blur-2xl border-b border-white/10`. MUST include the 1px inner stroke.",
+      "Grid Borders: Expose the skeleton for the 'Why Us' and 'Course Ecosystem' sections using subtle `border-slate-800` to mimic a technical environment.",
+      "Neo-Terminal: For market cards, use a solid dark background with a 1px border and a subtle internal glow."
+    ],
+    "textures": [
+      "Subtle noise overlays to kill digital flatness on dark backgrounds.",
+      "Financial grid patterns (`bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px]`)."
+    ],
+    "shadows": [
+      "Drop shadows are discouraged. Use 1px solid strokes or 2px 'Inner Glow' highlights instead to create depth."
+    ]
+  },
+  "components_to_use": {
+    "html_tailwind_only": [
+      "Hero sections",
+      "Bento grids for 'Why Us'",
+      "Course Ecosystem cards",
+      "Animated Learning Journey roadmap"
+    ],
+    "shadcn_customized": [
+      "Navigation Menu (Navbar)",
+      "Accordion (for FAQs and Curriculum)",
+      "Tabs (for categorizing courses or info)",
+      "Carousel (for testimonials wall)",
+      "Form & Inputs (for Contact/Booking form)"
+    ],
+    "libraries": [
+      "framer-motion: For scroll reveals, the animated learning roadmap line, and hover elevation.",
+      "recharts: MUST USE for the mini sparkline charts on the demo market cards.",
+      "lucide-react: Default UI icons.",
+      "react-fast-marquee: For the trust strip or scrolling ticker of stock symbols."
+    ]
+  },
+  "grids_and_layouts": {
+    "spacing": "Generous spacing. Use `py-24` or `py-32` for section gaps. Internal padding for cards must be `p-6` or `p-8`.",
+    "course_ecosystem": "Use Mode A 'Tetris' Bento grid. Break out of boring uniform squares. Mix tall, wide, and square cards.",
+    "hero_terminal": "Use Mode B 'High Density Grid' for the simulated demo market cards. Arrange NIFTY, BANK NIFTY, BTC in a tight, scanable layout floating beside or under the hero text.",
+    "container": "Max-width centered content (`max-w-7xl`), but allow background grids and borders to bleed full width."
+  },
+  "motion": {
+    "rules": [
+      "Micro-animations on all interactive elements: `hover:-translate-y-1 hover:border-emerald-500/50 transition-all duration-300`.",
+      "Parallax scroll on the background grid and floating market cards in the hero.",
+      "Staggered entrance animations for lists and course cards.",
+      "Glowing progress line for the Learning Journey (using Framer Motion `pathLength` animation)."
+    ]
+  },
+  "media": {
+    "images": [
+      {
+        "url": "https://images.pexels.com/photos/6203470/pexels-photo-6203470.jpeg",
+        "category": "Hero / About Section",
+        "description": "Abstract neon blue financial line chart. Use as a background layer with low opacity (e.g., opacity-20) mixed with a black radial gradient to add atmosphere."
+      },
+      {
+        "url": "https://images.pexels.com/photos/5831260/pexels-photo-5831260.jpeg",
+        "category": "Practical Learning / Course Pages",
+        "description": "Business professional at a trading desk with multiple monitors. Ideal for showcasing the 'Practical Learning' environment."
+      },
+      {
+        "url": "https://images.pexels.com/photos/5831259/pexels-photo-5831259.jpeg",
+        "category": "Why Us / Eco-system",
+        "description": "Close up of trader analyzing data. Good for 'Understand/Analyze' steps in the roadmap."
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1560250097-0b93528c311a",
+        "category": "Mentor Profile",
+        "description": "Professional portrait of a mentor in a corporate/trading setting."
+      },
+      {
+        "url": "https://images.pexels.com/photos/6918658/pexels-photo-6918658.jpeg",
+        "category": "Testimonials / Mentorship",
+        "description": "Businessman standing in front of stock market graph, conveying authority and experience."
+      }
+    ],
+    "rules": [
+      "Images must have a heavy dark overlay if text is placed on them (e.g., `bg-slate-950/60`).",
+      "Avoid completely replacing the hero image with text; let the financial aesthetics breathe through the UI."
+    ]
+  },
+  "pages_and_sections": {
+    "Hero": "Simulated trading terminal UI. Background has a subtle animated grid and the abstract chart image. Text on left, floating market cards (NIFTY, BTC, etc.) on right with mini Recharts sparklines. The cards must have green/red numbers and 'LIVE DEMO' badges.",
+    "Course_Ecosystem": "7 unique cards. Give 'Options Trading' and 'Technical Analysis' dominant grid spans. Include a difficulty badge, a market-inspired icon, and a ghost button CTA.",
+    "Learning_Journey": "A vertical or horizontal roadmap. 7 steps connected by an SVG line that 'fills up' with an electric green glow as the user scrolls.",
+    "SEO_Maps": "A clean 2-column layout. Left: Contact info in glass cards. Right: A large placeholder div for the Google Map (`bg-slate-900 border border-slate-800 flex items-center justify-center`)."
+  },
+  "instructions_to_main_agent": [
+    "You are building a React.js application using Tailwind CSS. Use .js (JSX) extensions, NOT .tsx.",
+    "Add fonts via Google Fonts in index.css: @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Manrope:wght@300;400;500;600;700&family=Sora:wght@300;400;600;700;800&display=swap');",
+    "Configure Tailwind config to extend fonts: sans: ['Manrope', 'sans-serif'], heading: ['Sora', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'].",
+    "Install required dependencies: `yarn add framer-motion recharts lucide-react react-fast-marquee sonner`",
+    "DO NOT use a fully transparent background for the sticky navbar. Use `bg-slate-950/80 backdrop-blur-md`.",
+    "For the Hero Market Cards, use `recharts` to render a tiny `<LineChart>` with `<Line type=\"monotone\" dataKey=\"value\" stroke=\"#00E59B\" strokeWidth={2} dot={false} />` to mimic real trading widgets.",
+    "Ensure the mobile sticky bottom bar is fixed to the bottom with `z-50`, containing 3 distinct action buttons (Book Demo, WhatsApp, Call).",
+    "For all actionable elements, implement robust `data-testid` attributes (e.g., `data-testid=\"hero-book-demo-btn\"`)."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Do not converge toward generic, 'on distribution' outputs. Avoid the 'AI slop' aesthetic.",
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients.",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy and 1px borders.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur).",
+    "You MUST NOT apply universal transition. Eg: `transition: all`. This results in breaking transforms.",
+    "You MUST NOT center align the app container, ie do not add `.App { text-align: center; }` in the css file.",
+    "Always use modern button styles (e.g., sharp edges with subtle inner glow, or pill-shaped) with interaction animations & color relevant to the app style.",
+    "NEVER: use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯 etc for icons. Use lucide-react.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Subtle grain textures, noise overlays, custom cursors, selection states, and loading animations: separates good from extraordinary.",
+    "Main agent relies on these image URLs. Missing categories (especially sponsor logos) = main agent will use placeholder text which is FORBIDDEN.",
+    "Prioritize using pre-existing components from src/components/ui when applicable.",
+    "Use `sonner` for toasts."
+  ]
+}
