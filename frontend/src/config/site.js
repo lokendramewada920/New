@@ -19,7 +19,7 @@ export const site = {
   // ---- NAP (Name / Address / Phone) — used by footer, contact, schema, maps ----
   contact: {
     phone: process.env.REACT_APP_PHONE_NUMBER || "", // [PHONE NUMBER — TO BE PROVIDED]
-    whatsapp: process.env.REACT_APP_WHATSAPP_NUMBER || "", // [WHATSAPP NUMBER — TO BE PROVIDED]
+    whatsapp: process.env.REACT_APP_WHATSAPP_NUMBER || "+917610714365",
     email: process.env.REACT_APP_BUSINESS_EMAIL || "", // [EMAIL — TO BE PROVIDED]
     address: process.env.REACT_APP_BUSINESS_ADDRESS || "", // [ADDRESS — TO BE PROVIDED]
     hours: "[WORKING HOURS — TO BE PROVIDED]",

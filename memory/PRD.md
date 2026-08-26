@@ -20,7 +20,7 @@ Home (19-section structure), About, Courses, 7 course detail pages, 5 Bhopal SEO
 ## Implemented (2026-08-26)
 - Full site: all pages/routes above, dark premium theme (Sora/Manrope/JetBrains Mono), animated candlestick canvas hero with parallax + scroll fade, demo market terminal cards (NIFTY, BANK NIFTY, SENSEX, BTC, GOLD, USD/INR — clearly marked "Demo · Not Live"), editorial marquee, trust strip, numbered-chapter About/Why Us, bento course ecosystem + 4 course spotlights, 7-step glowing learning journey timeline, mentor section (all placeholders), testimonial wall (empty-state placeholders, zero fake reviews), Bhopal SEO section, production-ready Google Maps container, FAQ accordion, CTA bands, footer with NAP + mandated market disclaimer.
 - Working lead capture: contact/demo form saves to MongoDB (verified end-to-end via UI + curl).
-- WhatsApp/Call buttons show "opening soon" notice until numbers are provided (verified).
+- WhatsApp number configured: +91 7610714365 (all WhatsApp buttons open wa.me chat — verified June 2026). Call/phone number still placeholder ("opening soon" notice).
 - SEO: per-page titles/meta/canonical/OG, JSON-LD schemas, sitemap, robots, breadcrumbs, alt text. No fake review schema.
 - Mobile: sticky bottom bar (Book Demo / WhatsApp / Call), animated hamburger menu, no horizontal overflow (verified at 390px).
 - Fixed during QA: component import depth bug (CTABand/MapSection), double `/api` form endpoint, SEO landing page routing.
