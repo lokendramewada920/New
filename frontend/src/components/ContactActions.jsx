@@ -5,10 +5,15 @@ import { site, hasValue } from "../config/site";
 
 // WhatsApp / Call actions — numbers come from src/config/site.js (or .env).
 // Until real numbers are provided, buttons show a "coming soon" notice.
+export const DEFAULT_WA_MESSAGE = "Hi, I want to book a free demo class at Arts Of Finance.";
+
+export const whatsAppUrl = (message = DEFAULT_WA_MESSAGE) =>
+  `https://wa.me/${site.contact.whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent(message)}`;
+
 export const useContactActions = () => {
-  const openWhatsApp = () => {
+  const openWhatsApp = (message = DEFAULT_WA_MESSAGE) => {
     if (hasValue(site.contact.whatsapp)) {
-      window.open(`https://wa.me/${site.contact.whatsapp.replace(/\D/g, "")}`, "_blank", "noopener");
+      window.open(whatsAppUrl(message), "_blank", "noopener");
     } else {
       toast.info("WhatsApp line opening soon", {
         description: "Our mentor WhatsApp number is being set up. Book a free demo and we will reach out to you.",
@@ -44,7 +49,7 @@ export const WhatsAppButton = ({ className = "", label = "WhatsApp a Mentor", te
   const { openWhatsApp } = useContactActions();
   return (
     <button
-      onClick={openWhatsApp}
+      onClick={() => openWhatsApp()}
       data-testid={testId}
       className={`inline-flex items-center justify-center gap-2 rounded-full border border-bull/40 bg-bull/5 px-7 py-3.5 font-heading text-sm font-bold uppercase tracking-[0.12em] text-bull transition-all duration-300 hover:-translate-y-0.5 hover:bg-bull/10 ${className}`}
     >

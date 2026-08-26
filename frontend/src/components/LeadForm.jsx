@@ -3,7 +3,8 @@ import axios from "axios";
 import { toast } from "sonner";
 import { Send, Loader2 } from "lucide-react";
 import { courses } from "../data/courses";
-import { site } from "../config/site";
+import { site, hasValue } from "../config/site";
+import { whatsAppUrl } from "./ContactActions";
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
@@ -39,6 +40,20 @@ const LeadForm = ({ defaultCourse = "", source = "website" }) => {
       toast.success("Demo request received", {
         description: "Our team will reach out to schedule your free demo session.",
       });
+      if (hasValue(site.contact.whatsapp)) {
+        const lines = [
+          "Hi, I want to book a free demo class at Arts Of Finance.",
+          `Name: ${form.name}`,
+          `Phone: ${form.phone}`,
+          form.email && `Email: ${form.email}`,
+          form.course && `Course: ${form.course}`,
+          form.mode && `Mode: ${form.mode}`,
+          form.experience && `Experience: ${form.experience}`,
+          form.callbackTime && `Callback: ${form.callbackTime}`,
+          form.message && `Message: ${form.message}`,
+        ].filter(Boolean);
+        setTimeout(() => window.open(whatsAppUrl(lines.join("\n")), "_blank", "noopener"), 800);
+      }
       setForm({ name: "", phone: "", email: "", course: defaultCourse, mode: "", experience: "", callbackTime: "", message: "" });
     } catch {
       toast.error("Could not submit right now", { description: "Please try again in a moment." });
