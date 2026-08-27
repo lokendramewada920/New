@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { CandlestickChart, MapPin, Phone, Mail, Instagram, Youtube, Facebook, Linkedin } from "lucide-react";
+import { MapPin, Phone, Mail, Instagram, Youtube, Facebook, Linkedin } from "lucide-react";
 import { site, displayOr, MARKET_DISCLAIMER } from "../../config/site";
 import { courses } from "../../data/courses";
 
@@ -17,9 +17,7 @@ const Footer = () => {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <Link to="/" className="flex items-center gap-2.5">
-              <span className="flex h-9 w-9 items-center justify-center rounded-lg border border-bull/30 bg-bull/10 text-bull">
-                <CandlestickChart className="h-5 w-5" />
-              </span>
+              <img src="/logo-bull.png" alt="Arts Of Finance bull logo" className="h-9 w-auto" loading="lazy" />
               <span className="font-heading text-sm font-bold uppercase tracking-[0.18em] text-white">
                 Arts <span className="text-bull">Of</span> Finance
               </span>

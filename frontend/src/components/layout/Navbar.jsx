@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ArrowUpRight, CandlestickChart } from "lucide-react";
+import { Menu, X, ArrowUpRight } from "lucide-react";
 import { ThemeToggle } from "../ThemeToggle";
 
 const LINKS = [
@@ -48,9 +48,7 @@ const Navbar = () => {
     >
       <nav className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-5 lg:px-8">
         <Link to="/" data-testid="nav-logo" className="group flex items-center gap-2.5">
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg border border-bull/30 bg-bull/10 text-bull transition-colors duration-300 group-hover:bg-bull/20">
-            <CandlestickChart className="h-5 w-5" />
-          </span>
+          <img src="/logo-bull.png" alt="Arts Of Finance bull logo" className="h-9 w-auto transition-transform duration-300 group-hover:scale-105" />
           <span className="font-heading text-sm font-bold uppercase tracking-[0.18em] text-white">
             Arts <span className="text-bull">Of</span> Finance
           </span>
