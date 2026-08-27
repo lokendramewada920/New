@@ -5,9 +5,9 @@ import { Reveal } from "../components/motion/Reveal";
 import FAQAccordion from "../components/FAQAccordion";
 import Hero from "../components/home/Hero";
 import { TrustStrip, AboutPreview, WhyUs } from "../components/home/TrustAbout";
-import { CourseEcosystem, CourseSpotlights } from "../components/home/CourseShowcase";
+import { CourseEcosystem } from "../components/home/CourseShowcase";
 import Journey from "../components/home/Journey";
-import { Mentor, Testimonials } from "../components/home/People";
+import { Testimonials } from "../components/home/People";
 import BhopalSEO from "../components/home/BhopalSEO";
 import MapSection from "../components/MapSection";
 import CTABand from "../components/CTABand";
@@ -27,16 +27,14 @@ const HomePage = () => (
     <AboutPreview />
     <WhyUs />
     <CourseEcosystem />
-    <CourseSpotlights />
     <Journey />
-    <Mentor />
     <Testimonials />
     <BhopalSEO />
     <MapSection />
     <section className="py-24 lg:py-32" data-testid="home-faq-section">
       <div className="mx-auto max-w-4xl px-5 lg:px-8">
         <Reveal className="text-center">
-          <p className="overline-tag">09 — Answers</p>
+          <p className="overline-tag">08 — Answers</p>
           <h2 className="mt-4 font-heading text-3xl font-bold tracking-tighter text-white sm:text-4xl">
             Questions, Answered Directly
           </h2>

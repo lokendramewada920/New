@@ -9,7 +9,7 @@ const LINKS = [
   { to: "/about", label: "About" },
   { to: "/courses", label: "Courses" },
   { to: "/#why-us", label: "Why Us", hash: "why-us" },
-  { to: "/#mentor", label: "Mentor", hash: "mentor" },
+  { to: "/mentors", label: "Mentor" },
   { to: "/blog", label: "Blog" },
   { to: "/faq", label: "FAQ" },
   { to: "/contact", label: "Contact" },

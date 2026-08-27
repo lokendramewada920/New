@@ -10,6 +10,7 @@ import BlogPage from "@/pages/BlogPage";
 import BlogPostPage from "@/pages/BlogPostPage";
 import FAQPage from "@/pages/FAQPage";
 import ContactPage from "@/pages/ContactPage";
+import MentorsPage from "@/pages/MentorsPage";
 import LegalPage from "@/pages/LegalPage";
 import NotFoundPage from "@/pages/NotFoundPage";
 
@@ -27,6 +28,7 @@ function App() {
             <Route path="/blog/:slug" element={<BlogPostPage />} />
             <Route path="/faq" element={<FAQPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/mentors" element={<MentorsPage />} />
             <Route path="/stock-market-classes-bhopal" element={<SEOLandingPage slug="stock-market-classes-bhopal" />} />
             <Route path="/technical-analysis-course-bhopal" element={<SEOLandingPage slug="technical-analysis-course-bhopal" />} />
             <Route path="/fundamental-analysis-course-bhopal" element={<SEOLandingPage slug="fundamental-analysis-course-bhopal" />} />

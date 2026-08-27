@@ -7,7 +7,7 @@ const BhopalSEO = () => (
   <section className="grid-bg relative border-y border-white/5 py-24 lg:py-32" data-testid="bhopal-seo-section">
     <div className="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
       <Reveal>
-        <p className="overline-tag">07 — Bhopal's Market Campus</p>
+        <p className="overline-tag">06 — Bhopal's Market Campus</p>
         <h2 className="mt-4 font-heading text-3xl font-bold tracking-tighter text-white sm:text-4xl lg:text-5xl">
           Stock Market Classes in <span className="text-gradient-green">Bhopal</span>
         </h2>

@@ -8,7 +8,7 @@ const MapSection = () => (
   <section className="relative py-24 lg:py-32" data-testid="map-section">
     <div className="mx-auto max-w-7xl px-5 lg:px-8">
       <Reveal className="max-w-2xl">
-        <p className="overline-tag">08 — Visit Us</p>
+        <p className="overline-tag">07 — Visit Us</p>
         <h2 className="mt-4 font-heading text-3xl font-bold tracking-tighter text-white sm:text-4xl lg:text-5xl">
           Visit Arts Of Finance
         </h2>

@@ -7,7 +7,7 @@ export const Mentor = () => (
   <section id="mentor" className="relative border-y border-white/5 bg-ink-900/30 py-24 lg:py-32" data-testid="mentor-section">
     <div className="mx-auto max-w-7xl px-5 lg:px-8">
       <Reveal className="max-w-3xl">
-        <p className="overline-tag text-gold">05 — Your Mentors</p>
+        <p className="overline-tag text-gold">Your Mentors</p>
         <h2 className="mt-4 font-heading text-3xl font-bold tracking-tighter text-white sm:text-4xl lg:text-5xl">
           Learn From Mentors Who <span className="text-gradient-gold">Read Markets Daily</span>
         </h2>
@@ -110,7 +110,7 @@ export const Testimonials = () => (
   <section className="relative py-24 lg:py-32" data-testid="testimonials-section">
     <div className="mx-auto max-w-7xl px-5 lg:px-8">
       <Reveal className="max-w-2xl">
-        <p className="overline-tag">06 — Student Voices</p>
+        <p className="overline-tag">05 — Student Voices</p>
         <h2 className="mt-4 font-heading text-3xl font-bold tracking-tighter text-white sm:text-4xl lg:text-5xl">
           Reviews, <span className="text-gradient-green">The Honest Way</span>
         </h2>

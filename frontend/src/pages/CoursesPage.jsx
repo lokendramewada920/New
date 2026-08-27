@@ -1,6 +1,7 @@
 import { SEO, breadcrumbSchema } from "../components/seo/SEO";
 import { Reveal } from "../components/motion/Reveal";
 import CourseCard from "../components/CourseCard";
+import { CourseSpotlights } from "../components/home/CourseShowcase";
 import CTABand from "../components/CTABand";
 import { courses } from "../data/courses";
 
@@ -44,6 +45,18 @@ const CoursesPage = () => (
         </Reveal>
       </div>
     </section>
+
+    <section className="pb-10 lg:pb-14">
+      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+        <Reveal>
+          <p className="overline-tag">Course Spotlights</p>
+          <h2 className="mt-4 font-heading text-3xl font-bold tracking-tighter text-white sm:text-4xl">
+            A Closer Look At <span className="text-gradient-green">Each Program</span>
+          </h2>
+        </Reveal>
+      </div>
+    </section>
+    <CourseSpotlights />
 
     <CTABand title="Confused Between Courses? Start With a Free Demo" sub="One session with a mentor will tell you exactly where to begin." />
   </>
