@@ -42,7 +42,7 @@ const Hero = () => {
               <span className="relative h-1.5 w-1.5 rounded-full bg-bull" />
             </span>
             <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-bull">
-              Premium Stock Market Training in Bhopal
+              Best Stock Market Training in Bhopal
             </span>
           </motion.div>
 
