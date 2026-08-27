@@ -108,8 +108,24 @@ export const Mentor = () => (
   </section>
 );
 
-// ---------------- TESTIMONIALS (placeholders only — no invented reviews) ----------------
-const PLACEHOLDER_REVIEWS = [0, 1, 2];
+// ---------------- TESTIMONIALS (real reviews as shared by the institute) ----------------
+const REVIEWS = [
+  {
+    name: "Krapal",
+    course: "Course Complete",
+    text: "I joined Arts Of Finance to learn about the stock market and had a really good experience. Sir explains everything in a very simple way and also clears all the doubts. I learned technical analysis and price action from the basics. One of the good stock market classes in Bhopal.",
+  },
+  {
+    name: "Vimal",
+    course: "Course Complete",
+    text: "I was completely new to the stock market when I joined Arts Of Finance. The classes helped me understand charts, technical analysis and options trading properly. The teaching is simple and practical. If you are looking for stock market classes in Bhopal, you can definitely visit Arts Of Finance.",
+  },
+  {
+    name: "Ankit",
+    course: "Course Complete",
+    text: "Really good experience with Arts Of Finance. I joined mainly to learn options and technical analysis. The concepts are explained with practical examples, so it becomes easier to understand. The staff and mentor are also very supportive. Good place for stock market training in Bhopal.",
+  },
+];
 
 export const Testimonials = () => (
   <section className="relative py-24 lg:py-32" data-testid="testimonials-section">
@@ -120,31 +136,30 @@ export const Testimonials = () => (
           Reviews, <span className="text-gradient-green">The Honest Way</span>
         </h2>
         <p className="mt-5 text-base text-slate-400">
-          Verified student reviews will appear here exactly as shared with us — names, courses and ratings included.
-          We don't publish invented testimonials.
+          Real student reviews, published exactly as shared with us — names, courses and ratings included.
         </p>
       </Reveal>
 
       <Stagger className="mt-14 grid gap-5 md:grid-cols-3">
-        {PLACEHOLDER_REVIEWS.map((i) => (
+        {REVIEWS.map((r, i) => (
           <StaggerItem
-            key={i}
-            data-testid={`testimonial-placeholder-${i}`}
-            className="rounded-2xl border border-dashed border-slate-700 bg-ink-900/40 p-7"
+            key={r.name}
+            data-testid={`testimonial-card-${i}`}
+            className="terminal-card flex flex-col p-7"
           >
             <div className="flex gap-1">
               {Array.from({ length: 5 }).map((_, s) => (
-                <Star key={s} className="h-4 w-4 text-slate-700" />
+                <Star key={s} className="h-4 w-4 fill-gold text-gold" />
               ))}
             </div>
-            <p className="mt-5 font-mono text-xs leading-relaxed text-slate-500">[ Student Review — To Be Provided ]</p>
+            <p className="mt-5 flex-1 text-sm leading-relaxed text-slate-300">"{r.text}"</p>
             <div className="mt-6 flex items-center gap-3 border-t border-slate-800 pt-5">
-              <span className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-700 text-slate-600">
-                <User className="h-4 w-4" />
+              <span className="flex h-9 w-9 items-center justify-center rounded-full border border-bull/40 bg-bull/10 font-heading text-sm font-bold text-bull">
+                {r.name[0]}
               </span>
               <div>
-                <p className="font-mono text-[11px] uppercase tracking-wider text-slate-500">[ Student Name ]</p>
-                <p className="font-mono text-[10px] text-slate-600">[ Course ]</p>
+                <p className="font-heading text-sm font-bold text-white">{r.name}</p>
+                <p className="font-mono text-[10px] uppercase tracking-wider text-slate-500">{r.course}</p>
               </div>
             </div>
           </StaggerItem>

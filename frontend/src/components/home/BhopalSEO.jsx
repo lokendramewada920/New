@@ -38,7 +38,7 @@ const BhopalSEO = () => (
             <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-slate-500">Serving Learners Across</p>
           </div>
           <div className="mt-4 flex flex-wrap gap-2">
-            {["MP Nagar", "MP Nagar Zone 2", "Arera Colony", "New Market", "Kolar", "Hoshangabad Road", "Bhopal + Online"].map((a) => (
+            {["MP Nagar", "MP Nagar Zone 2", "Arera Colony", "New Market", "Kolar", "Hoshangabad Road", "Lalghati", "Indrapuri", "Awadhpuri", "Minal", "Misrod", "Bhopal + Online"].map((a) => (
               <span key={a} className="rounded-full border border-slate-700 px-3 py-1.5 font-mono text-[10px] uppercase tracking-wider text-slate-400">
                 {a}
               </span>
