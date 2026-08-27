@@ -50,6 +50,11 @@ export const Mentor = () => (
                   SEBI Registered Research Analyst
                 </p>
               )}
+              {m.sebi && (
+                <p className="mt-1 font-mono text-[10px] uppercase tracking-wider text-gold">
+                  PG — SEBI NISM, Mumbai
+                </p>
+              )}
               <p className="mt-3 flex items-center gap-1.5 text-xs text-slate-400">
                 <Sparkles className="h-3.5 w-3.5 text-gold" />
                 {hasValue(m.expertise) ? m.expertise : "Expertise details coming soon"}

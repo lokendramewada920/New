@@ -48,7 +48,21 @@ const Hero = () => {
 
           <h1 className="mt-7 font-heading text-4xl font-extrabold leading-[1.05] tracking-tighter text-white sm:text-5xl lg:text-6xl">
             <LineReveal text="MASTER THE MARKET." delay={0.25} />
-            <LineReveal text="BUILD YOUR EDGE." delay={0.42} className="text-gradient-green" />
+            <LineReveal
+              text="LEARN FROM A SEBI REGISTERED"
+              delay={0.42}
+              className="text-gradient-green mt-2 text-[0.52em] leading-snug"
+            />
+            <LineReveal
+              text="RESEARCH ANALYST & PG FROM"
+              delay={0.52}
+              className="text-gradient-green text-[0.52em] leading-snug"
+            />
+            <LineReveal
+              text="SEBI NISM, MUMBAI"
+              delay={0.62}
+              className="text-gradient-gold text-[0.52em] leading-snug"
+            />
           </h1>
 
           <motion.p

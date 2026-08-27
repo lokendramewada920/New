@@ -114,7 +114,7 @@ export const WhyUs = () => (
       <Reveal className="max-w-2xl">
         <p className="overline-tag">02 — Why Arts Of Finance</p>
         <h2 className="mt-4 font-heading text-3xl font-bold tracking-tighter text-white sm:text-4xl lg:text-5xl">
-          Built Like a Discipline. <span className="text-gradient-gold">Taught Like a Craft.</span>
+          Learn Directly From a <span className="text-gradient-gold">SEBI-Registered Research Analyst</span>
         </h2>
       </Reveal>
       <Stagger className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-slate-800 bg-slate-800 sm:grid-cols-2 lg:grid-cols-3">
