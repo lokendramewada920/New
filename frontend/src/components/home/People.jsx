@@ -1,4 +1,4 @@
-import { User, Star, Quote, ShieldCheck, Mic2, Sparkles, ExternalLink } from "lucide-react";
+import { User, Star, Quote, ShieldCheck, Mic2, Sparkles } from "lucide-react";
 import { Reveal, Stagger, StaggerItem } from "../motion/Reveal";
 import { site, hasValue } from "../../config/site";
 
@@ -145,20 +145,6 @@ export const Testimonials = () => (
           </StaggerItem>
         ))}
       </Stagger>
-
-      <Reveal delay={0.15}>
-        <div className="glass mt-8 flex flex-col items-start justify-between gap-5 rounded-2xl p-7 sm:flex-row sm:items-center">
-          <div>
-            <p className="font-heading text-base font-bold text-white">Google Reviews</p>
-            <p className="mt-1 text-sm text-slate-400">
-              Our verified Google Business reviews will be linked here. [ GOOGLE REVIEW PROFILE LINK — TO BE PROVIDED ]
-            </p>
-          </div>
-          <span className="inline-flex cursor-not-allowed items-center gap-2 rounded-full border border-white/15 px-6 py-3 font-heading text-xs font-bold uppercase tracking-[0.15em] text-slate-500" data-testid="google-reviews-placeholder-btn">
-            View Google Reviews <ExternalLink className="h-3.5 w-3.5" />
-          </span>
-        </div>
-      </Reveal>
     </div>
   </section>
 );

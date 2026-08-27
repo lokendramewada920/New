@@ -40,20 +40,20 @@ export const site = {
   mentors: [
     {
       role: "MD & Mentor",
-      name: "[MENTOR NAME — TO BE PROVIDED]",
+      name: "Lokenndra Mewada",
+      photo: "",
+      expertise: "[AREAS OF EXPERTISE — TO BE PROVIDED]",
+    },
+    {
+      role: "Director & Mentor",
+      name: "Taha Rahi",
       photo: "",
       sebi: true,
       expertise: "[AREAS OF EXPERTISE — TO BE PROVIDED]",
     },
     {
       role: "Director & Mentor",
-      name: "[MENTOR NAME — TO BE PROVIDED]",
-      photo: "",
-      expertise: "[AREAS OF EXPERTISE — TO BE PROVIDED]",
-    },
-    {
-      role: "Director & Mentor",
-      name: "[MENTOR NAME — TO BE PROVIDED]",
+      name: "Pankaj Mehra",
       photo: "",
       expertise: "[AREAS OF EXPERTISE — TO BE PROVIDED]",
     },

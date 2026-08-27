@@ -9,7 +9,6 @@ import { CourseEcosystem } from "../components/home/CourseShowcase";
 import Journey from "../components/home/Journey";
 import { Testimonials } from "../components/home/People";
 import BhopalSEO from "../components/home/BhopalSEO";
-import MapSection from "../components/MapSection";
 import CTABand from "../components/CTABand";
 import { faqs } from "../data/faqs";
 import { site } from "../config/site";
@@ -30,11 +29,10 @@ const HomePage = () => (
     <Journey />
     <Testimonials />
     <BhopalSEO />
-    <MapSection />
     <section className="py-24 lg:py-32" data-testid="home-faq-section">
       <div className="mx-auto max-w-4xl px-5 lg:px-8">
         <Reveal className="text-center">
-          <p className="overline-tag">08 — Answers</p>
+          <p className="overline-tag">07 — Answers</p>
           <h2 className="mt-4 font-heading text-3xl font-bold tracking-tighter text-white sm:text-4xl">
             Questions, Answered Directly
           </h2>
