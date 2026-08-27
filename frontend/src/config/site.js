@@ -20,9 +20,9 @@ export const site = {
   contact: {
     phone: process.env.REACT_APP_PHONE_NUMBER || "+917610714365",
     whatsapp: process.env.REACT_APP_WHATSAPP_NUMBER || "+917610714365",
-    email: process.env.REACT_APP_BUSINESS_EMAIL || "", // [EMAIL — TO BE PROVIDED]
-    address: process.env.REACT_APP_BUSINESS_ADDRESS || "", // [ADDRESS — TO BE PROVIDED]
-    hours: "[WORKING HOURS — TO BE PROVIDED]",
+    email: process.env.REACT_APP_BUSINESS_EMAIL || "contact.us@artsoffinance.in",
+    address: process.env.REACT_APP_BUSINESS_ADDRESS || "36A, Near Som Group, MP Nagar Zone 2, Bhopal, Madhya Pradesh",
+    hours: "9:00 AM – 6:00 PM",
     mapEmbedUrl: process.env.REACT_APP_GOOGLE_MAP_EMBED_URL || "", // [GOOGLE MAP EMBED — TO BE PROVIDED]
     mapLink: "", // [GOOGLE MAPS DIRECTIONS URL — TO BE PROVIDED]
     googleBusinessProfile: "", // [GOOGLE BUSINESS PROFILE LINK — TO BE PROVIDED]
@@ -35,13 +35,42 @@ export const site = {
     linkedin: "", // [LINKEDIN — TO BE PROVIDED]
   },
 
-  // ---- Mentor profile (all placeholders until verified info is supplied) ----
+  // ---- Mentor team (names/photos are placeholders until provided) ----
+  sebiRegistration: "INH000018780",
+  mentors: [
+    {
+      role: "MD & Mentor",
+      name: "[MENTOR NAME — TO BE PROVIDED]",
+      photo: "",
+      sebi: true,
+      expertise: "[AREAS OF EXPERTISE — TO BE PROVIDED]",
+    },
+    {
+      role: "Director & Mentor",
+      name: "[MENTOR NAME — TO BE PROVIDED]",
+      photo: "",
+      expertise: "[AREAS OF EXPERTISE — TO BE PROVIDED]",
+    },
+    {
+      role: "Director & Mentor",
+      name: "[MENTOR NAME — TO BE PROVIDED]",
+      photo: "",
+      expertise: "[AREAS OF EXPERTISE — TO BE PROVIDED]",
+    },
+  ],
+  guestLecturers: [
+    { name: "[GUEST MENTOR 1 — TO BE PROVIDED]", topic: "[SESSION TOPIC]" },
+    { name: "[GUEST MENTOR 2 — TO BE PROVIDED]", topic: "[SESSION TOPIC]" },
+    { name: "[GUEST MENTOR 3 — TO BE PROVIDED]", topic: "[SESSION TOPIC]" },
+    { name: "[GUEST MENTOR 4 — TO BE PROVIDED]", topic: "[SESSION TOPIC]" },
+    { name: "[GUEST MENTOR 5 — TO BE PROVIDED]", topic: "[SESSION TOPIC]" },
+  ],
   mentor: {
     photo: "", // [MENTOR PHOTO — TO BE PROVIDED]
     name: "[MENTOR NAME]",
-    designation: "[DESIGNATION]",
+    designation: "MD & Mentor",
     qualifications: "[QUALIFICATIONS — TO BE PROVIDED]",
-    certifications: "[CERTIFICATIONS — TO BE PROVIDED]",
+    certifications: "SEBI Registered Research Analyst · Reg. No. INH000018780",
     experience: "[EXPERIENCE — TO BE PROVIDED]",
     expertise: ["Technical Analysis", "Options", "Risk Management", "Trading Psychology"], // [AREAS OF EXPERTISE — CONFIRM]
     message: "[MENTOR MESSAGE — TO BE PROVIDED]",

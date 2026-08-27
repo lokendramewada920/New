@@ -5,7 +5,7 @@ import { Reveal, Stagger, StaggerItem } from "../components/motion/Reveal";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../components/ui/accordion";
 import CourseCard from "../components/CourseCard";
 import CTABand from "../components/CTABand";
-import { BookDemoButton, WhatsAppButton } from "../components/ContactActions";
+import { BookDemoButton, WhatsAppButton, useContactActions } from "../components/ContactActions";
 import { getCourse, courses } from "../data/courses";
 import { site } from "../config/site";
 
@@ -16,6 +16,7 @@ const chunk = (arr, n) => {
 
 const CourseDetailPage = () => {
   const { slug } = useParams();
+  const { openWhatsApp } = useContactActions();
   const course = getCourse(slug);
   if (!course) return <Navigate to="/courses" replace />;
 
@@ -23,7 +24,7 @@ const CourseDetailPage = () => {
   const phases = chunk(course.modules, 3);
   const courseFaqs = [
     { q: `Who is the ${course.name} course for?`, a: `${course.name} at Arts Of Finance is designed for: ${course.whoFor.join(", ").toLowerCase()}. The program is mentor-led and available offline in Bhopal and online.` },
-    { q: `What is the fee for the ${course.name} course?`, a: "Course fees, duration and batch timings are shared on enquiry or during the free demo session, so you get the current schedule and any applicable offers directly from the team." },
+    { q: `What is the fee for the ${course.name} course?`, a: "Course fees are shared directly by the institute — contact us on WhatsApp or book a free demo to get the current fee structure and any applicable offers. Batch timings are flexible and are planned around learner schedules." },
     { q: `Is the ${course.name} course available online?`, a: "Yes. Major programs at Arts Of Finance run in both offline (Bhopal classroom) and live online modes with the same mentor-led structure." },
     { q: "Does the course guarantee profits?", a: "No — and you should be cautious of anyone who does. We teach structured frameworks, practical skills and risk management. Market outcomes always involve risk." },
   ];
@@ -64,7 +65,6 @@ const CourseDetailPage = () => {
             <div className="mt-8 flex flex-wrap gap-3">
               {[
                 { icon: Signal, label: course.level },
-                { icon: IndianRupee, label: course.fees },
                 { icon: Clock3, label: course.duration },
                 { icon: CalendarClock, label: course.timings },
               ].map(({ icon: Icon, label }, i) => (
@@ -73,6 +73,14 @@ const CourseDetailPage = () => {
                   {label}
                 </span>
               ))}
+              <button
+                onClick={() => openWhatsApp(`Hi, I want to know the fees for the ${course.name} course at Arts Of Finance.`)}
+                data-testid="course-fees-whatsapp-chip"
+                className="flex items-center gap-2 rounded-full border border-bull/40 bg-bull/5 px-4 py-2 font-mono text-[10px] uppercase tracking-wider text-bull transition-colors duration-300 hover:bg-bull/10"
+              >
+                <IndianRupee className="h-3.5 w-3.5" />
+                {course.fees}
+              </button>
             </div>
             <div className="mt-9 flex flex-wrap gap-4">
               <BookDemoButton testId="course-book-demo-btn" />

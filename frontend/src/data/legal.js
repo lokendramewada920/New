@@ -64,7 +64,7 @@ export const legalPages = {
       },
       {
         h: "Regulatory Note",
-        p: "Arts Of Finance is an educational institute. [SEBI / REGULATORY REGISTRATION STATUS — TO BE PROVIDED BY BUSINESS IF APPLICABLE]. Learners should consult a registered investment adviser before making investment decisions.",
+        p: "Arts Of Finance is an educational institute. Our mentor is a SEBI Registered Research Analyst (Registration No. INH000018780). Learners should consult a registered investment adviser before making investment decisions.",
       },
     ],
   },

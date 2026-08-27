@@ -83,8 +83,10 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1.1 }}
-            className="mt-12 flex items-center gap-6 font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500"
+            className="mt-12 flex flex-wrap items-center gap-x-6 gap-y-3 font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500"
           >
+            <span className="text-gold" data-testid="hero-sebi-line">SEBI Registered Research Analyst Mentor</span>
+            <span className="h-3 w-px bg-slate-700" />
             <span>Offline + Online</span>
             <span className="h-3 w-px bg-slate-700" />
             <span>Mentor-Led</span>

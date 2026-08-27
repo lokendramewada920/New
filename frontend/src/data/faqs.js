@@ -1,6 +1,10 @@
 // AEO-optimized FAQ system — concise, authoritative answers to direct search questions.
 export const faqs = [
   {
+    q: "Is the mentor a SEBI registered research analyst?",
+    a: "Yes. Our mentor is a SEBI Registered Research Analyst — Registration No. INH000018780. This means the mentor is registered with the Securities and Exchange Board of India as a research analyst, reflecting a commitment to regulated, credible and ethical market education.",
+  },
+  {
     q: "What are the best stock market classes in Bhopal?",
     a: "The best stock market classes combine a structured curriculum, practical chart-based learning, mentor guidance and risk-first education. Arts Of Finance in Bhopal offers mentor-led programs across technical analysis, fundamental analysis, options, crypto and forex, in both offline and online modes, with a free demo session so you can evaluate the teaching approach before enrolling.",
   },
