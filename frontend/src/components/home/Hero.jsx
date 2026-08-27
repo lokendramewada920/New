@@ -29,7 +29,7 @@ const Hero = () => {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(0,229,155,0.07),transparent_55%)]" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-ink-950 to-transparent" />
 
-      <div className="relative mx-auto grid max-w-7xl gap-14 px-5 pb-20 pt-36 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-8 lg:pb-28 lg:pt-44">
+      <div className="relative mx-auto grid max-w-7xl gap-14 px-5 pb-14 pt-28 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-8 lg:pb-16 lg:pt-32">
         <div>
           <motion.div
             initial={{ opacity: 0, y: 12 }}
@@ -46,7 +46,7 @@ const Hero = () => {
             </span>
           </motion.div>
 
-          <h1 className="mt-7 font-heading text-4xl font-extrabold leading-[1.05] tracking-tighter text-white sm:text-5xl lg:text-6xl">
+          <h1 className="mt-5 font-heading text-4xl font-extrabold leading-[1.05] tracking-tighter text-white sm:text-5xl lg:text-6xl">
             <LineReveal text="MASTER THE MARKET." delay={0.25} />
             <LineReveal
               text="LEARN FROM A SEBI REGISTERED"
@@ -69,7 +69,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.7 }}
-            className="mt-6 max-w-xl text-base leading-relaxed text-slate-400 lg:text-lg"
+            className="mt-5 max-w-xl text-base leading-relaxed text-slate-400 lg:text-lg"
           >
             Learn Technical Analysis, Fundamental Analysis, Options, Crypto, Forex and advanced market
             concepts through structured, practical and mentor-led learning.
@@ -79,7 +79,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.85 }}
-            className="mt-9 flex flex-wrap items-center gap-4"
+            className="mt-7 flex flex-wrap items-center gap-4"
           >
             <BookDemoButton testId="hero-book-demo-btn" />
             <Link
@@ -97,7 +97,7 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1.1 }}
-            className="mt-12 flex flex-wrap items-center gap-x-6 gap-y-3 font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500"
+            className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500"
           >
             <span className="text-gold" data-testid="hero-sebi-line">SEBI Registered Research Analyst Mentor</span>
             <span className="h-3 w-px bg-slate-700" />
