@@ -1,0 +1,20 @@
+# Arts Of Finance
+
+> Arts Of Finance is a stock-market training institute in Bhopal, India. Its mentor-led courses cover technical analysis, fundamental analysis, options, forex, crypto and NISM-oriented learning.
+
+## Primary pages
+
+- [Home](https://artsoffinance.in/): Institute overview and course information.
+- [Courses](https://artsoffinance.in/courses): All available market-learning courses.
+- [About](https://artsoffinance.in/about): Institute information.
+- [Mentors](https://artsoffinance.in/mentors): Mentor profiles.
+- [Blog](https://artsoffinance.in/blog): Educational market-learning articles.
+- [FAQ](https://artsoffinance.in/faq): Frequently asked questions.
+- [Contact](https://artsoffinance.in/contact): Enquiry and contact details.
+
+## Important
+
+- Educational content only; it is not investment, trading or financial advice.
+- [Privacy Policy](https://artsoffinance.in/privacy-policy)
+- [Terms](https://artsoffinance.in/terms)
+- [Disclaimer](https://artsoffinance.in/disclaimer)
