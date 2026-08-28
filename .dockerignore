@@ -1,0 +1,10 @@
+.git
+.github
+frontend/node_modules
+backend/__pycache__
+**/*.pyc
+.env
+**/.env
+test_reports
+memory
+tests

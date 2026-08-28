@@ -6,7 +6,7 @@ import { courses } from "../data/courses";
 import { site, hasValue } from "../config/site";
 import { whatsAppUrl } from "./ContactActions";
 
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+const API = `${process.env.REACT_APP_BACKEND_URL || ""}/api`;
 
 const inputCls =
   "w-full rounded-lg border border-slate-700/80 bg-ink-900/80 px-4 py-3 text-sm text-white placeholder:text-slate-500 outline-none transition-colors duration-200 focus:border-bull/60 focus:ring-1 focus:ring-bull/30";

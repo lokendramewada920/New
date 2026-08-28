@@ -1,7 +1,8 @@
 from fastapi import FastAPI, APIRouter
+from fastapi.responses import FileResponse
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
-from motor.motor_asyncio import AsyncIOMotorClient
+from google.cloud import firestore
 import os
 import logging
 from pathlib import Path
@@ -13,9 +14,8 @@ from datetime import datetime, timezone
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
 
-mongo_url = os.environ['MONGO_URL']
-client = AsyncIOMotorClient(mongo_url)
-db = client[os.environ['DB_NAME']]
+STATIC_DIR = ROOT_DIR.parent / "frontend-build"
+db = firestore.AsyncClient()
 
 app = FastAPI(title="Arts Of Finance API")
 api_router = APIRouter(prefix="/api")
@@ -62,9 +62,7 @@ async def health():
 @api_router.post("/leads", response_model=Lead)
 async def create_lead(input: LeadCreate):
     lead = Lead(**input.model_dump())
-    doc = lead.model_dump()
-    doc['created_at'] = doc['created_at'].isoformat()
-    await db.leads.insert_one(doc)
+    await db.collection("leads").document(lead.id).set(lead.model_dump())
     # CRM / email-service webhook can be triggered here once credentials are provided
     # (see CONTACT_FORM_ENDPOINT / CRM_API_KEY / EMAIL_SERVICE_API_KEY in .env)
     return lead
@@ -72,10 +70,10 @@ async def create_lead(input: LeadCreate):
 
 @api_router.get("/leads", response_model=List[Lead])
 async def list_leads():
-    leads = await db.leads.find({}, {"_id": 0}).sort("created_at", -1).to_list(500)
-    for lead in leads:
-        if isinstance(lead.get('created_at'), str):
-            lead['created_at'] = datetime.fromisoformat(lead['created_at'])
+    query = db.collection("leads").order_by(
+        "created_at", direction=firestore.Query.DESCENDING
+    ).limit(500)
+    leads = [Lead(**snapshot.to_dict()) async for snapshot in query.stream()]
     return leads
 
 
@@ -103,6 +101,11 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(level
 logger = logging.getLogger(__name__)
 
 
-@app.on_event("shutdown")
-async def shutdown_db_client():
-    client.close()
+@app.get("/{full_path:path}", include_in_schema=False)
+async def serve_frontend(full_path: str):
+    """Serve the React build and fall back to index.html for client-side routes."""
+    requested_file = (STATIC_DIR / full_path).resolve()
+    static_root = STATIC_DIR.resolve()
+    if requested_file.is_relative_to(static_root) and requested_file.is_file():
+        return FileResponse(requested_file)
+    return FileResponse(static_root / "index.html")
