@@ -13,7 +13,7 @@ export const site = {
   tagline: "Bhopal's Premier Stock Market Training Institute",
   url: SITE_URL,
   description:
-    "Arts Of Finance is a premium stock market training institute in Bhopal offering mentor-led courses in Technical Analysis, Fundamental Analysis, Options, Crypto, Forex and NISM-oriented learning.",
+    "Arts of Finance in Bhopal offers mentor-led stock market courses in technical analysis, options, forex, crypto, fundamental analysis and NISM.",
   established: "[ESTABLISHED YEAR — TO BE PROVIDED]",
 
   // ---- NAP (Name / Address / Phone) — used by footer, contact, schema, maps ----
